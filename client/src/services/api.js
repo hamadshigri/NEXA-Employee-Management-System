@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://localhost:5000/api",
+  baseURL: "https://nexa-employee-management-system-production.up.railway.app/api",
 });
 
 export default API;

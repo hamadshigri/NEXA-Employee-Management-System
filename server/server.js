@@ -13,9 +13,13 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://nexa-employee-management-system.vercel.app",
+  credentials: true
+}));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/employees", employeeRoutes);
